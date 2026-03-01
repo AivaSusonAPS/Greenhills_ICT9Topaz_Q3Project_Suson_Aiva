@@ -4,38 +4,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q3 Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-sm">
-    <div class="container-fluid">
-        <div class="logo">SwiftRide</div>
-    <a class="navbar-brand" href="index.html"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="Farematrix.html">Fare Matrix</a></li>
-                <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-                <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
-                    </ul>
-                <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Search">
-                <button class="btn btn-primary" type="button">Search</button>
-                </form>
-            </div>
+<body class="page-center">
+    <div class="form-container">
+        <h2>Create Account</h2>
+        <p style="margin-bottom: 20px; color: #666;">Enter your details to join SwiftRide.</p>
+        
+        <input type="text" placeholder="First Name">
+        <div class="split-input">
+            <input type="number" placeholder="Age">
+            <input type="text" placeholder="Contact Number">
         </div>
-    </nav>
-
-    <div class="container">
-        <div class="hero">
-            <h1>SwiftRide</h1>
-            <p>Fast, safe, and reliable transport at your fingertips</p>
-        </div>
-
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirm Password">
+        
+        <button class="btn-main" onclick="goToConfirmation()">Create Account</button>
+        <p style="margin-top: 15px; font-size: 14px; color: #777;">
+            Already have an account? <a href="index.html" style="color: var(--secondary); font-weight: bold;">Login</a>
+        </p>
+    </div>
+    <script src="proj.js"></script>
 </body>
 </html>
