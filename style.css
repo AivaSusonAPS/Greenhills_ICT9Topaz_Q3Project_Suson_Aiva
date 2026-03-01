@@ -1,5 +1,4 @@
 
-/* font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 :root {
     --primary: #f39c12;
@@ -237,5 +236,6 @@ option {
   background-color: #f39c12;
 }
 /*source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol */
+
 
 
