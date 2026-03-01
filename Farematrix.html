@@ -40,10 +40,44 @@
     <div class="card calculator-card">
         <h3>Fare Estimator</h3>
         <div class="form-container">
-                Pick-up<input type="text" placeholder="Starting point" id="pickup">
-               Drop-off<input type="text" placeholder="Destination" id="dropoff">
-                Distance (KM)<input type="number" placeholder="Enter KM" id="distance">
+                Pick-up
+               <div class="select1">
+    <select id="mySelect">
+      <option value="Select">Select</option>
+      <option value="North Avenue">North Avenue</option>
+      <option value="Quezon Avenue">Quezon Avenue</option>
+      <option value="GMA Kamuning">GMA Kamuning</option>
+      <option value="Araneta- Cubao">Araneta- Cubao</option>
+      <option value="Santolan- Annapolis">Santolan- Annapolis</option>
+      <option value="Ortigas">Ortigas</option>
+      <option value="Shaw Blvd.">Shaw Blvd.</option>
+      <option value="Boni Avenue">Boni Avenue</option>
+      <option value="Guadalupe">Guadalupe</option>
+      <option value="Buendia">Buendia</option>
+      <option value="Ayala Maganalles">Ayala Maganalles</option>
+      <option value="Taft Avenue">Taft Avenue</option>
+    </select>
+  </div>
 
+                Drop-off
+                 <div class="select2">
+    <select id="mySelect2">
+      <option value="Select">Select</option>
+      <option value="North Avenue">North Avenue</option>
+      <option value="Quezon Avenue">Quezon Avenue</option>
+      <option value="GMA Kamuning">GMA Kamuning</option>
+      <option value="Aranata- Cubao">Aranata- Cubao</option>
+      <option value="Santolan- Annapolis">Santolan- Annapolis</option>
+      <option value="Ortigas">Ortigas</option>
+      <option value="Shaw Blvd.">Shaw Blvd.</option>
+      <option value="Boni Avenue">Boni Avenue</option>
+      <option value="Guadalupe">Guadalupe</option>
+      <option value="Buendia">Buendia</option>
+      <option value="Ayala Maganalles">Ayala Maganalles</option>
+      <option value="Taft Avenue">Taft Avenue</option>
+    </select>
+  </div>
+            
             <div class="checkbox-group">
                 <input type="checkbox" id="discount"><label for="discount">Student / Senior / PWD (20% off)</label>
             </div>
@@ -59,6 +93,9 @@
             </div>
         </section>
     </div>
+    
     <script src="proj.js"></script>
+
+    <footer class="footer"><b>Created by:</b> Suson & Reyes | <b>Grade & Section:</b> 9-Topaz <br> <b>Source:</b> Metro Line App</footer>
 </body>
 </html>
