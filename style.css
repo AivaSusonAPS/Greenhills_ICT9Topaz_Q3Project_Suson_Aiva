@@ -80,7 +80,7 @@ nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 
 .checkbox-group input { width: 18px; height: 18px; cursor: pointer; }
 .checkbox-group label { color: var(--text); font-size: 0.9rem; font-weight: 600; cursor: pointer; }
 
-
+/*INPUTS: Padding added to stop clashing letter */
 input {
     width: 100%;
     padding: 12px 15px;
@@ -90,15 +90,18 @@ input {
     font-family: inherit;
 }
 
-
 .table-class td { padding: 8px 16px;}
 
-
 .split-input { display: flex; gap: 10px; }
+
 .result-box { background: #f1f2f6; padding: 20px; border-radius: 15px; border-left: 6px solid var(--primary); }
 .btn-main { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; margin-top: 10px; }
+
+/*FOOTER*/
 footer { background: rgba(0, 0, 0, 0.4); text-align: center; padding: 25px; font-size: 14px; margin-top: auto; }
 footer a { color: var(--primary); text-decoration: none; }
+
+/* PAGE CENTERING */
 .page-center { justify-content: center; align-items: center; display: flex; flex: 1; padding: 40px 20px; }
 .success-icon { font-size: 4rem; color: #2ecc71; margin-bottom: 10px; text-align: center; }
 .success-box { text-align: center; max-width: 450px; width: 100%; }
@@ -234,4 +237,5 @@ option {
   background-color: #f39c12;
 }
 /*source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol */
+
 
