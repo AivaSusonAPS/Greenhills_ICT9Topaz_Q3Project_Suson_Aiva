@@ -1,12 +1,18 @@
 
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 :root {
     --primary: #f39c12;
     --secondary: #8e44ad;
     --dark: #1e1e2f;
     --white: #ffffff;
     --text: #2c3e50;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -238,4 +244,5 @@ option {
   background-color: #f39c12;
 }
 /*source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol */
+
 
