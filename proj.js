@@ -1,30 +1,82 @@
-// Computing for fare with discount option
 
-const BASE_FARE = 50;   
-const PER_KM_RATE = 15; 
-const BASE_KM = 2;      
+// Computing for total fare
 
-function calculateFare() {
-    let distVal = document.getElementById("distance").value;
-    let isDiscounted = document.getElementById("discount").checked;
-    let resultDisplay = document.getElementById("result");
+// Ordered list of MRT 3
+const stationRoutes = [
+    "North Avenue",
+    "Quezon Avenue",
+    "GMA Kamuning",
+    "Araneta- Cubao",
+    "Santolan- Annapolis",
+    "Ortigas",
+    "Shaw Blvd.",
+    "Boni Avenue",
+    "Guadalupe",
+    "Buendia",
+    "Ayala Maganalles",
+    "Taft Avenue"
+];
 
-    let distance = parseFloat(distVal);
-    
-    if (isNaN(distance) || distance < 0) {
-        resultDisplay.innerHTML = "Total: ₱0.00";
+const trainDistances = [1.2, 1.0, 1.7, 1.7, 2.2, 0.8, 1.0, 0.8, 1.8, 0.9, 1.9];
+
+function computedDistance(pickup, destination) {
+    let startIndex = stationRoutes.indexOf(pickup);
+    let endIndex = stationRoutes.indexOf(destination);
+
+    let distance = 0;
+    for (let i = startIndex; i < endIndex; i++) {
+        distance += trainDistances[i];
+    }
+    distance = Math.round(distance * 100) / 100; // round to 2 decimal places
+return distance;
+}
+
+//calculate fare
+    function calculateFare() {
+let pickup = document.getElementById("mySelect").value.trim();
+let destination = document.getElementById("mySelect2").value.trim();
+let isDiscounted = document.getElementById("discount").checked;
+
+    console.log("Pickup:", pickup, "Destination:", destination);
+    console.log("Start index:", stationRoutes.indexOf(pickup));
+    console.log("End index:", stationRoutes.indexOf(destination));
+
+    if (pickup === "Select" || destination === "Select") {
+        window.alert("Something went wrong. Please select both pickup and destination stations.");
+        document.getElementById("result").innerHTML = "Total: ₱0.00";
         return;
     }
 
-    let totalFare = (distance <= BASE_KM) ? BASE_FARE : BASE_FARE + ((distance - BASE_KM) * PER_KM_RATE);
-    
-    if (isDiscounted) {
-        totalFare *= 0.80; 
+let totalDistance = computedDistance(pickup, destination);
+
+    if (totalDistance === 0) {
+        document.getElementById("result").innerHTML = "Total: ₱0.00";
+   
+        return;
     }
 
-    resultDisplay.innerHTML = "Total: ₱" + totalFare.toFixed(2);
+    const baseFare = 50; //min fare which include first 2KM
+    const perKMrate = 15; //cost per KM beeyond 2KM
+    const baseKM = 2; //distance included in the base
+
+let totalFare;
+
+// if total distance is below 2km or equal to it, totalFare will be = 50php
+    if (totalDistance === 0) {
+        totalFare = 0;
+    }
+    else if (totalDistance <= baseKM) {
+        	totalFare = baseFare;
+    }
+    else{
+            totalFare = baseFare + (totalDistance - baseKM) * perKMrate;
+    }
+
+    if (isDiscounted) totalFare *= 0.80;
+
+    document.getElementById("result").innerHTML = "Total: ₱" + totalFare.toFixed(2);
 }
 
-function goToConfirmation() {
-    window.location.href = "confirmation.html";
-}
+// Source:
+// https://www.w3schools.com/JS/js_if_else.asp
+// https://www.w3schools.com/js/js_loop_for.asp
