@@ -85,11 +85,13 @@ let totalFare;
 // Source:
 // https://www.w3schools.com/JS/js_if_else.asp
 // https://www.w3schools.com/js/js_loop_for.asp
+// https://www.w3schools.com/js/js_const.asp
 
 function goToConfirmation() {
     window.location.href = "confirmation.html";
 
 }
+
 
 
 
