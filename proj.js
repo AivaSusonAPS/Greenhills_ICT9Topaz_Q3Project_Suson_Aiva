@@ -13,7 +13,8 @@ const stationRoutes = [
     "Boni Avenue",
     "Guadalupe",
     "Buendia",
-    "Ayala Maganalles",
+    "Ayala",
+    "Maganalles",
     "Taft Avenue"
 ];
 
@@ -85,5 +86,6 @@ function goToConfirmation() {
     window.location.href = "confirmation.html";
 
 }
+
 
 
