@@ -17,7 +17,7 @@ const stationRoutes = [
     "Taft Avenue"
 ];
 
-const trainDistances = [1.0, 1.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 2.0, 1.0, 2.0];
+const trainDistances = [1.0, 1.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 2.0, 1.0, 1.0, 2.0];
 
 function computedDistance(pickup, destination) {
     let startIndex = stationRoutes.indexOf(pickup);
@@ -85,4 +85,5 @@ function goToConfirmation() {
     window.location.href = "confirmation.html";
 
 }
+
 
